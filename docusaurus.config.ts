@@ -3,7 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Zinoah",
+  title: "zinoah",
   tagline: "Dg",
   favicon: "img/favicon.ico",
 
@@ -58,10 +58,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "Zinoah",
+      title: "zinoah",
       logo: {
         alt: "Logo",
-        src: "img/logo.svg",
+        src: "img/logo.png",
       },
       items: [
         {
