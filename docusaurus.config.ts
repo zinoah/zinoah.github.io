@@ -3,12 +3,12 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "ZinoDev",
-  tagline: "Dinosaurs are cool",
+  title: "Zinoah",
+  tagline: "Dg",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://zinoah.github.io",
+  url: "https://www.zinoah.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -58,7 +58,7 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "ZinoDev",
+      title: "Zinoah",
       logo: {
         alt: "Logo",
         src: "img/logo.svg",
