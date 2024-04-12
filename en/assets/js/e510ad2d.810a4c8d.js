@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkzino_website=self.webpackChunkzino_website||[]).push([[775],{52:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/en/blog/tags/hola","allTagsPath":"/en/blog/tags","count":1,"unlisted":false}')}}]);
