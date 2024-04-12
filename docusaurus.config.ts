@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "zinoah",
-  tagline: "Dg",
+  tagline: "",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -25,8 +25,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "ko",
-    locales: ["ko"],
+    defaultLocale: "ko-kr",
+    locales: ["en"],
   },
 
   presets: [
@@ -34,6 +34,7 @@ const config: Config = {
       "classic",
       {
         docs: {
+          // routeBasePath: "/",
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -62,20 +63,26 @@ const config: Config = {
       logo: {
         alt: "Logo",
         src: "img/logo.png",
+        srcDark: "img/logo_dark.png",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
         { to: "/blog", label: "Blog", position: "left" },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "mySidebar",
+        //   position: "left",
+        //   label: "Tutorial",
+        // },
         {
           href: "https://github.com/zinoah",
-          label: "GitHub",
+          // label: "GitHub",
+          className: "header-github-link",
           position: "right",
         },
+        // {
+        //   type: "localeDropdown",
+        //   position: "right",
+        // },
       ],
     },
     footer: {
@@ -126,6 +133,41 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: "291JBF3BZ8",
+
+      // Public API key: it is safe to commit it
+      apiKey: "91cea0811a0e199922dd4d0559437637",
+
+      indexName: "zinoah",
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: "external\\.com|domain\\.com",
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: "/docs/", // or as RegExp: /\/docs\//
+        to: "/",
+      },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: "search",
+
+      //... other Algolia params
     },
   } satisfies Preset.ThemeConfig,
 };
